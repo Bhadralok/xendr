@@ -1,1 +1,7 @@
 @import "tailwindcss";
+
+@theme {
+  --color-primary-orange: #e28400;
+  --color-primary-black: #190f00;
+  /* white is white */
+}
