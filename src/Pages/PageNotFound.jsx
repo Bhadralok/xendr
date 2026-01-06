@@ -2,7 +2,7 @@ import Blob from "../assets/blob";
 import logo from "../assets/favicon.svg";
 export default function PageNotFound() {
   return (
-    <div className="h-screen w-screen flex flex-col items-center justify-center">
+    <div className="h-screen  flex flex-col items-center justify-center">
       <div className="flex flex-col  h-69 items-center gap-1">
         <div className="relative ">
           <Blob />
@@ -14,9 +14,7 @@ export default function PageNotFound() {
       <h1 className="font-bold text-4xl text-primary-black">
         <span className="text-primary-orange">Oops... </span>Page Not Found
       </h1>
-      <div>
-        The page you are looking for does not exist or has been moved.
-      </div>
+      <div>The page you are looking for does not exist or has been moved.</div>
     </div>
   );
 }
