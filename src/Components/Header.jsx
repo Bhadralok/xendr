@@ -6,14 +6,11 @@ import thunderActive from "../assets/thunder-orange.svg";
 import thunderInactive from "../assets/thunder.svg";
 import helmetActive from "../assets/helmet-orange.svg";
 import helmetInactive from "../assets/helmet.svg";
-import { useState } from "react";
 import download from "../assets/download.svg";
 
 import Button from "../UI/Buttons";
 import { NavLink } from "react-router-dom";
 export default function Header() {
-  const [activeLink, setActiveLink] = useState(0);
-
   return (
     <div className="flex items-center justify-between">
       <div className="w-screen flex items-center gap-6">

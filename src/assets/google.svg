@@ -1,0 +1,20 @@
+<svg
+  width="48"
+  height="48"
+  viewBox="0 0 512 512"
+  xmlns="http://www.w3.org/2000/svg"
+  aria-label="Google Play"
+  role="img"
+>
+  <!-- Blue -->
+  <path fill="#00A0FF" d="M65 42l230 214L65 470z"/>
+
+  <!-- Green -->
+  <path fill="#00D959" d="M65 42l289 171-59 43z"/>
+
+  <!-- Yellow -->
+  <path fill="#FFE000" d="M65 470l289-171-59-43z"/>
+
+  <!-- Red -->
+  <path fill="#FF3A44" d="M354 213l93 43-93 43-59-43z"/>
+</svg>

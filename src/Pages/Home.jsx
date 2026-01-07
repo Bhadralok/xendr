@@ -1,16 +1,17 @@
 import Blob from "../assets/blob";
 import doodle from "../assets/doodle.svg";
-import Button from "../UI/Buttons";
-import NavLinks from "../UI/NavLinks";
+import Download from "../Components/Download.jsx";
+import Footer from "../Components/Footer.jsx";
+import PageNotFound from "./PageNotFound.jsx";
+
 export default function Home() {
   return (
-    <div className="h-screen">
-      <div
-        className="w-32 "
-        // style={{ backgroundImage: `url(${doodle})` }}
-      >
-        <NavLinks isActive={false} />
-      </div>
+    <div
+      className="h-screen w-screen"
+      // style={{ backgroundImage: `url(${doodle})` }}
+    >
+      <Download />
+      <Footer />
     </div>
   );
 }
