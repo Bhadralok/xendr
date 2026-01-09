@@ -28,12 +28,12 @@ export default function Footer() {
 
       <div>
         <div className="flex gap-3">
-          <p>Terms & Conditions</p>
+          <p className = "text-[0.75rem] font-black">Terms & Conditions</p>
           <img src={arrowOutward} alt="" />
         </div>
 
         <div className="flex justify-end gap-3">
-          <p>Privacy Policy</p>
+          <p className = "text-[0.75rem] font-black">Privacy Policy</p>
           <img src={arrowOutward} alt="arrow" />
         </div>
       </div>

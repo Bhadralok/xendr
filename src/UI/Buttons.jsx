@@ -1,4 +1,4 @@
-import { HashLoader } from "react-spinners";
+// import { HashLoader } from "react-spinners";
 export default function Button({
   icon1,
   icon2,

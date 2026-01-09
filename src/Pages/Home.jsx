@@ -7,11 +7,10 @@ import PageNotFound from "./PageNotFound.jsx";
 export default function Home() {
   return (
     <div
-      className="h-screen w-screen  "
+      className="h-fit" style ={{backgroundImage: `url(${doodle})`}}
       // style={{ backgroundImage: `url(${doodle})` }}
     >
       <Download />
-      <Footer />
     </div>
   );
 }
