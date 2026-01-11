@@ -8,9 +8,7 @@ import Start from "../Components/Start.jsx";
 export default function HowItWorks() {
   return (
     <>
-    <div>
-      <Start />
-    </div>
+
 
     <div className="h-231 pl-10  flex flex-col justify-center  gap-18 ">
 
