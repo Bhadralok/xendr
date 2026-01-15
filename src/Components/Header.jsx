@@ -9,8 +9,29 @@ import helmetInactive from "../assets/helmet.svg";
 import download from "../assets/download.svg";
 
 import Button from "../UI/Buttons";
-import { NavLink } from "react-router-dom";
+import { NavLink, useSearchParams } from "react-router-dom";
+import { useEffect } from "react";
 export default function Header() {
+  const [searchParams, setSearchParams] = useSearchParams();
+
+  const id = searchParams.get("id");
+
+  useEffect(() => {
+    const onScroll = () => {
+      if (window.scrollY < 80 && id !== "top") {
+        setSearchParams({ id: "top" });
+      }
+    };
+
+    window.addEventListener("scroll", onScroll);
+    return () => window.removeEventListener("scroll", onScroll);
+  }, [id, setSearchParams]);
+
+  const scrollTo = (id) => {
+    document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
+    setSearchParams({ id: id });
+  };
+
   return (
     <div className="flex items-center justify-between">
       <div className="w-screen flex items-center gap-6">
@@ -20,41 +41,32 @@ export default function Header() {
           </div>
         </div>
         <div className="flex gap-8">
-          <NavLink to="/" end>
-            {({ isActive }) => (
-              <NavLinks
-                isActive={isActive}
-                imageActive={homeActive}
-                imageNotActive={homeInactive}
-              >
-                Home
-              </NavLinks>
-            )}
-          </NavLink>
+          <NavLinks
+            isActive={searchParams.get("id") === "top"}
+            imageActive={homeActive}
+            imageNotActive={homeInactive}
+            onClick={() => scrollTo("top")}
+          >
+            Home
+          </NavLinks>
 
-          <NavLink to="/how-it-works">
-            {({ isActive }) => (
-              <NavLinks
-                isActive={isActive}
-                imageActive={thunderActive}
-                imageNotActive={thunderInactive}
-              >
-                How it works
-              </NavLinks>
-            )}
-          </NavLink>
+          <NavLinks
+            isActive={searchParams.get("id") === "how-it-works"}
+            imageActive={thunderActive}
+            imageNotActive={thunderInactive}
+            onClick={() => scrollTo("how-it-works")}
+          >
+            How it works
+          </NavLinks>
 
-          <NavLink to="/become-a-rider">
-            {({ isActive }) => (
-              <NavLinks
-                isActive={isActive}
-                imageActive={helmetActive}
-                imageNotActive={helmetInactive}
-              >
-                Become a Rider
-              </NavLinks>
-            )}
-          </NavLink>
+          <NavLinks
+            isActive={searchParams.get("id") === "rider"}
+            imageActive={helmetActive}
+            imageNotActive={helmetInactive}
+            onClick={() => scrollTo("rider")}
+          >
+            Become a Rider
+          </NavLinks>
         </div>
       </div>
       <div className="w-55">

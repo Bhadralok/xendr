@@ -3,12 +3,14 @@ export default function NavLinks({
   imageNotActive,
   imageActive,
   onClick,
+  id,
   children,
 }) {
   return (
     <div
       className="flex items-center gap-2 text-sm uppercase font-black"
       onClick={onClick}
+      id={id}
     >
       <img
         src={`${isActive ? imageActive : imageNotActive}`}

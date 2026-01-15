@@ -13,12 +13,14 @@ import HowItWorks from "./Pages/HowItWorks";
 export default function App() {
   const router = createBrowserRouter(
     createRoutesFromElements(
-      <Route element={<Layout />}>
-        <Route path="/" element={<Home />} />
-        <Route path="/how-it-works" element={<HowItWorks />} />
-        <Route path="/become-a-rider" element={<BecomeARider />} />
+      <>
+        <Route element={<Layout />}>
+          <Route path="/" element={<Home />} />
+          <Route path="/how-it-works" element={<HowItWorks />} />
+          <Route path="/become-a-rider" element={<BecomeARider />} />
+        </Route>
         <Route path="*" element={<PageNotFound />} />
-      </Route>
+      </>
     )
   );
   return <RouterProvider router={router} />;
