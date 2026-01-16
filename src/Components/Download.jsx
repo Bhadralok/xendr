@@ -21,7 +21,7 @@ export default function Download() {
 
         <p className=" text-[#565656] font-medium">
           Get the app from the Appstore or Google Playstore to send packages
-          easily <br /> and seamlessly
+          easily and<br /> seamlessly
         </p>
 
         <div className="">
