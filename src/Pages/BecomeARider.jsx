@@ -4,7 +4,7 @@ import arrowBack from "../assets/arrow_back.svg";
 
 export default function BecomeARider() {
   return (
-    <div className=" h-231 bg-primary-black text-white flex justify-around items-center">
+    <div className=" h-231 px-10 bg-primary-black text-white flex justify-between items-center">
         <div className="flex flex-col gap-9">
           <div className="flex gap-2">
             <img src={grayHelmet} alt="helmet" />

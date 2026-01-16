@@ -5,7 +5,7 @@ import DownloadButton from "../UI/DownloadButton";
 
 export default function Download() {
   return (
-    <div className="bg-[#FFF2DF] py-15.5 px-10 flex justify-evenly ">
+    <div className="bg-[#FFF2DF] py-15.5 px-10 space-x-0 flex justify-between">
       <img src={Phones} alt="phones" />
 
       <div className="py-49 flex flex-col gap-9">
